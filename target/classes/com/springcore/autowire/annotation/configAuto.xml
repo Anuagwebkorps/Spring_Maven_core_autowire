@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+               
+              <context:annotation-config/>
+               <bean  class="com.springcore.autowire.annotation.Address" name="temp1">
+                 <property name="city" value="khargone"></property>
+                 <property name="street" value="gayatri nagar"></property>
+               </bean>
+               <bean  class="com.springcore.autowire.annotation.Address" name="tepm2">
+                 <property name="city" value="khargone"></property>
+                 <property name="street" value="gayatri nagar"></property>
+               </bean>
+               
+               <bean  class="com.springcore.autowire.annotation.Emp" name="emp1" />
+              
+               
+</beans> 
+
+  <!-- Address class ka obj emp me aa gaya autowire ki madet se -->
+  <!-- Autowiring ko hum 3in type se use ker skte hai i)property  per  ii)setter iii)constructor) -->
+  <!-- by default byType autowiring hoti hai -->  
+  <!-- @Qualifier("name") annotation use so if more then two bean class present in xml file it will identifay our bean class -->
